@@ -37,6 +37,8 @@ echo Terraform version $(terraform --version)
 echo Gcloud version $(gcloud --version)
 echo AWS-cli version $(aws --version)
 
+cp .bash_aliases ~/
+
 echo 'eval "$(thefuck --alias)"' >> ~/.bashrc
 hstr --show-configuration >> ~/.bashrc
 source ~/.bashrc
