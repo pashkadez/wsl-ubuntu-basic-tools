@@ -19,7 +19,7 @@ tfenv install latest
 tfenv use latest
 
 echo Adding apt keys
-curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+# curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 
 echo Adding apt repositories
 # sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
