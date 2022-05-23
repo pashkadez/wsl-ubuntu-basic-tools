@@ -26,6 +26,17 @@ echo Adding apt repositories
 sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 sudo add-apt-repository --yes --update ppa:ansible/ansible
 echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+sudo add-apt-repository ppa:ultradvorka/ppa
 
 echo installing software
-sudo apt update && sudo apt install ansible packer google-cloud-cli -y
+sudo apt update && sudo apt install hstr ansible packer google-cloud-cli -y
+
+echo Ansible version $(ansible --version)
+echo Packer version $(packer --version)
+echo Terraform version $(terraform --version)
+echo Gcloud version $(gcloud --version)
+echo AWS-cli version $(aws --version)
+
+echo 'eval "$(thefuck --alias)"' >> ~/.bashrc
+hstr --show-configuration >> ~/.bashrc
+source ~/.bashrc
